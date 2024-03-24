@@ -165,6 +165,8 @@ class _MyHomePageState extends State<MyHomePage> {
         await _helper.inference(inputArray.sublist(0, _requiredInputBuffer));
     setState(() {
       // take top 3 classification
+      log(_classification.first.key);
+      log(DateTime.now().toString());
       _classification = (result.entries.toList()
             ..sort(
               (a, b) => a.value.compareTo(b.value),
